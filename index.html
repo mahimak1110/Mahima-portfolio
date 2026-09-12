@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Kumari Mahima — Senior Backend Engineer building reliable Java and Kotlin systems.">
+<title>Mahima — Senior Backend Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+ --paper:#f7f3eb; --ink:#202521; --muted:#6c716d; --green:#17796d;
+ --mint:#dceee7; --lav:#e8e2f4; --rose:#f3ddd9; --yellow:#f4e7b7;
+ --white:#fffdf9; --line:#d9d5cc; --max:1180px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{max-width:var(--max);margin:auto;padding:0 28px}
+nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(247,243,235,.92);backdrop-filter:blur(12px);z-index:10}
+.logo{font-weight:700;font-size:24px;letter-spacing:-.04em}
+.navlinks{display:flex;gap:28px;font-size:14px;color:#555b57}.navlinks a:hover{color:var(--green)}
+.resume{border:1px solid #9db8b1;border-radius:999px;padding:10px 17px;color:var(--green);font-weight:700;font-size:13px}
+.hero{min-height:680px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:70px;padding:80px 0 75px}
+.kicker{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);font-weight:700}
+.hero h1{font-size:clamp(48px,6.5vw,82px);line-height:.98;letter-spacing:-.065em;margin:17px 0 22px;max-width:720px}
+.hero h1 i{font-family:"Playfair Display";font-weight:600;letter-spacing:-.04em;color:var(--green)}
+.hero .intro{font-size:19px;color:#535a55;max-width:650px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0 24px}
+.btn{padding:13px 19px;border-radius:999px;background:var(--green);color:white;font-weight:700;font-size:14px}
+.btn.alt{background:transparent;color:var(--ink);border:1px solid #b8b6ae}
+.meta{display:flex;gap:20px;flex-wrap:wrap;color:#70756f;font-size:13px}.meta span:before{content:"•";color:#e0787e;margin-right:8px}
+.photo-wrap{position:relative;display:flex;justify-content:center}
+.photo-frame{width:min(470px,100%);background:white;padding:13px 13px 18px;box-shadow:0 18px 45px rgba(47,48,42,.13);transform:rotate(2deg);position:relative}
+.photo-frame img{width:100%;display:block;aspect-ratio:1/1;object-fit:cover}
+.tape{position:absolute;width:110px;height:27px;background:#ead9a8;opacity:.8;top:-13px;left:50%;transform:translateX(-50%) rotate(-3deg)}
+section{padding:90px 0;border-top:1px solid var(--line)}
+.section-title{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:38px}
+.section-title h2{font-size:clamp(34px,4vw,52px);line-height:1.05;letter-spacing:-.05em;margin:8px 0 0}
+.section-title p{max-width:500px;color:var(--muted);margin:0}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}
+.about-copy{font-size:18px;color:#505650}.signature{font-family:"Playfair Display";font-style:italic;color:var(--green);font-size:23px;margin-top:30px}
+.skill-area{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.skill{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:22px}
+.skill:nth-child(2){background:var(--mint)}.skill:nth-child(3){background:var(--lav)}.skill:nth-child(4){background:var(--rose)}
+.skill h3{margin:0 0 12px;font-size:17px}.chips{display:flex;gap:7px;flex-wrap:wrap}.chip{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.72);font-size:12px;color:#44514c}
+.experience{display:grid;grid-template-columns:180px 1fr;gap:45px;padding:30px 0;border-bottom:1px solid var(--line)}
+.experience:last-child{border-bottom:0}.years{font-size:13px;color:#7b807a}.company{color:var(--green);font-weight:700;font-size:14px;margin-top:4px}
+.experience h3{font-size:24px;letter-spacing:-.025em;margin:0}.experience ul{margin:13px 0 0;padding-left:19px;color:#5e645f}.experience li{margin:7px 0}
+.feature{display:grid;grid-template-columns:1fr .75fr;background:var(--mint);border-radius:28px;overflow:hidden;border:1px solid #c9ded6}
+.feature-main{padding:42px}.feature-main h3{font-size:38px;letter-spacing:-.045em;margin:8px 0 12px}.feature-main p{color:#53635d;font-size:17px;max-width:650px}
+.feature-side{padding:42px;background:rgba(255,255,255,.42);border-left:1px solid #c9ded6}.flow{display:grid;gap:9px;margin-top:18px}.flow div{padding:12px 14px;background:rgba(255,255,255,.7);border-radius:12px;font-size:13px}.flow small{color:var(--green);font-weight:700}
+.eu{background:#202a27;color:#f7f3eb;border-radius:30px;padding:48px;display:grid;grid-template-columns:1fr auto;gap:35px;align-items:center}
+.eu h2{font-size:42px;letter-spacing:-.045em;line-height:1.05;margin:8px 0}.eu p{color:#bdc7c2;max-width:650px}.eu .btn{background:#f0d99d;color:#202a27}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:60px}.contact h2{font-size:52px;line-height:1.02;letter-spacing:-.05em;margin:8px 0}.contact p{color:var(--muted);font-size:18px}
+.contact-links{display:grid;gap:12px}.contact-link{padding:18px 20px;border:1px solid var(--line);background:var(--white);border-radius:16px;display:flex;justify-content:space-between}.contact-link strong{color:var(--green)}
+footer{border-top:1px solid var(--line);padding:28px 0;color:#777c76;font-size:13px;display:flex;justify-content:space-between}
+@media(max-width:850px){
+ .navlinks{display:none}.hero,.about,.feature,.contact,.eu{grid-template-columns:1fr}.hero{padding-top:55px;gap:40px}.photo-wrap{order:-1}.skill-area{grid-template-columns:1fr}.experience{grid-template-columns:1fr;gap:8px}.section-title{display:block}.section-title p{margin-top:15px}.eu{padding:32px}.contact h2{font-size:42px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+ <a class="logo" href="#">Mahima</a>
+ <div class="navlinks"><a href="#about">About</a><a href="#experience">Experience</a><a href="#project">Project</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+ <a class="resume" href="Mahima-resume.pdf" target="_blank">Download Resume</a>
+</nav>
+
+<header class="hero">
+ <div>
+  <div class="kicker">Senior Backend Engineer · Java & Kotlin</div>
+  <h1>Hi, I'm <i>Mahima.</i><br>I build backend systems<br>that stay reliable.</h1>
+  <p class="intro">I have 7+ years of backend experience across automotive, travel and banking. Most of my work is around APIs, microservices, messaging, data and the problems that appear in production.</p>
+  <div class="buttons"><a class="btn" href="mailto:kmahima1196@gmail.com">Let's talk →</a><a class="btn alt" href="https://github.com/mahimak1110/travel-ai-assistant" target="_blank">See my GitHub ↗</a></div>
+  <div class="meta"><span>🇩🇪 Germany Opportunity Card</span><span>🇪🇺 Open to European relocation</span></div>
+ </div>
+ <div class="photo-wrap"><div class="photo-frame"><img src="mahima-profile.png" alt="Mahima profile photo"></div></div>
+</header>
+
+<section id="about">
+ <div class="section-title"><div><div class="kicker">A little about me</div><h2>Engineer first.<br>Curious always.</h2></div><p>I care less about collecting technologies and more about using the right ones to solve a real problem.</p></div>
+ <div class="about">
+  <div class="about-copy"><p>I currently work at Deloitte, with Mercedes-Benz R&D India as my client. I build Kotlin and Spring Boot services for an automotive certification platform.</p><p>Before Deloitte, I worked at IBS Software on Expedia projects and at TCS on a Deutsche Bank project.</p><div class="signature">Next chapter: Europe →</div></div>
+  <div class="skill-area">
+   <div class="skill"><h3>What I enjoy</h3><div class="chips"><span class="chip">System design</span><span class="chip">Performance</span><span class="chip">Reliability</span><span class="chip">APIs</span></div></div>
+   <div class="skill"><h3>How I build</h3><div class="chips"><span class="chip">Java</span><span class="chip">Kotlin</span><span class="chip">Spring Boot</span><span class="chip">Microservices</span></div></div>
+   <div class="skill"><h3>When systems grow</h3><div class="chips"><span class="chip">Kafka</span><span class="chip">Caching</span><span class="chip">Retries</span><span class="chip">Observability</span></div></div>
+   <div class="skill"><h3>Where it runs</h3><div class="chips"><span class="chip">Kubernetes</span><span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">Docker</span></div></div>
+  </div>
+ </div>
+</section>
+
+<section id="experience">
+ <div class="section-title"><div><div class="kicker">Work experience</div><h2>A few places<br>I have worked.</h2></div><p>Different products and industries, but the same focus: reliable backend systems and practical engineering decisions.</p></div>
+ <article class="experience"><div class="years">Sep 2025 – Present</div><div><h3>Senior Backend Engineer · Kotlin</h3><div class="company">Deloitte · Client: Mercedes-Benz R&D India</div><ul><li>Build cloud-native certification workflow microservices with Kotlin, Spring Boot and Kubernetes.</li><li>Design versioned APIs with OpenAPI and use idempotency and safe retries for reliable workflows.</li><li>Work with OAuth2/RBAC, audit logging, CI/CD and production observability.</li><li>Investigated and fixed a production database performance issue caused by an N+1 query pattern.</li><li>Helped bridge a German-to-India handover and supported engineers through complex domain flows.</li></ul></div></article>
+ <article class="experience"><div class="years">Apr 2024 – Sep 2025</div><div><h3>Java Backend Engineer</h3><div class="company">IBS Software Services · Client: Expedia Group</div><ul><li>Worked on travel checkout and property-detail platforms supporting 10M+ daily users for Expedia.</li><li>Improved API performance through monitoring, tracing and backend/JVM performance work.</li><li>Built production services with a strong focus on reliability and troubleshooting.</li></ul></div></article>
+ <article class="experience"><div class="years">2018 – 2021</div><div><h3>Java Developer</h3><div class="company">Tata Consultancy Services · Client: Deutsche Bank</div><ul><li>Worked on fraud-alert and financial transaction processing systems for Deutsche Bank.</li><li>Built backend services where correctness, security and auditability were critical.</li></ul></div></article>
+</section>
+
+<section id="skills">
+ <div class="section-title"><div><div class="kicker">My toolbox</div><h2>Technologies I actually<br>like working with.</h2></div></div>
+ <div class="skill-area">
+  <div class="skill"><h3>Backend</h3><div class="chips"><span class="chip">Java 8 / 11 / 17 / 21 / 25</span><span class="chip">Kotlin</span><span class="chip">Spring Boot</span><span class="chip">Spring Cloud</span><span class="chip">REST / OpenAPI</span><span class="chip">Hibernate / JPA</span></div></div>
+  <div class="skill"><h3>Distributed systems</h3><div class="chips"><span class="chip">Kafka</span><span class="chip">RabbitMQ</span><span class="chip">DLQ</span><span class="chip">Retries</span><span class="chip">Idempotency</span><span class="chip">Caching</span></div></div>
+  <div class="skill"><h3>Platform</h3><div class="chips"><span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">Terraform</span><span class="chip">Azure DevOps</span></div></div>
+  <div class="skill"><h3>Data & security</h3><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">Elasticsearch</span><span class="chip">MongoDB</span><span class="chip">OAuth2</span><span class="chip">RBAC</span></div></div>
+ </div>
+</section>
+
+<section id="project">
+ <div class="section-title"><div><div class="kicker">Something I built for fun</div><h2>Travel AI Assistant</h2></div><p>I built this to understand how AI features fit into the backend systems I already know.</p></div>
+ <div class="feature">
+  <div class="feature-main"><div class="kicker">Personal project</div><h3>Travel AI Assistant</h3><p>I wanted to learn what happens after the LLM call: API design, conversation state, persistence and reliability.</p><p>It uses Java 21, Spring Boot, LangChain4j, Ollama with Qwen, PostgreSQL and React/Vite. The application exposes a REST chat API, keeps conversations isolated with a conversation ID, and stores chat history in PostgreSQL so the assistant can remember context across messages.</p><p>It is a hands-on way for me to learn LLM integration, prompt handling, conversation memory and the practical trade-offs around AI in backend systems.</p><div class="buttons"><a class="btn" href="https://github.com/mahimak1110/travel-ai-assistant" target="_blank">View project ↗</a></div></div>
+  <div class="feature-side"><strong>The architecture</strong><div class="flow"><div><small>01</small> React + Vite UI</div><div><small>02</small> Spring Boot · /api/chat</div><div><small>03</small> LangChain4j → Ollama / Qwen</div><div><small>04</small> PostgreSQL · conversation memory</div><div><small>05</small> Java 21 · local LLM workflow</div></div></div>
+ </div>
+</section>
+
+<section>
+ <div class="eu"><div><div class="kicker" style="color:#a9d8ca">Where I'm headed</div><h2>🇩🇪 Germany Opportunity Card<br>🇪🇺 Open to European relocation</h2><p>I am looking for Senior Backend, Java or Kotlin opportunities in Europe. Germany and the Netherlands are my main targets, and I am open to relocation across Europe.</p></div><a class="btn" href="mailto:kmahima1196@gmail.com?subject=Backend%20Opportunity%20in%20Europe">Let's connect →</a></div>
+</section>
+
+<section id="contact">
+ <div class="contact"><div><div class="kicker">Say hello</div><h2>Let's talk about backend engineering.</h2><p>If you are hiring for a senior backend role, I would be happy to talk about the team, the product and the problems you are solving.</p></div>
+ <div class="contact-links"><a class="contact-link" href="mailto:kmahima1196@gmail.com"><span>Email</span><strong>kmahima1196@gmail.com ↗</strong></a><a class="contact-link" href="https://www.linkedin.com/in/kumarimahima11" target="_blank"><span>LinkedIn</span><strong>Connect ↗</strong></a><a class="contact-link" href="https://github.com/mahimak1110/travel-ai-assistant" target="_blank"><span>GitHub</span><strong>Projects ↗</strong></a></div></div>
+</section>
+</div>
+<footer><div class="wrap" style="display:flex;justify-content:space-between;width:100%"><span>Mahima</span><span>Java · Kotlin · Spring Boot · Distributed Systems · AI</span></div></footer>
+</body>
+</html>
